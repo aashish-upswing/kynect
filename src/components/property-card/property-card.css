@@ -11,18 +11,21 @@
   overflow: hidden;
   width: 100%;
   max-width: 602px;
+  max-height: 134px;
   box-shadow: none;
   padding: 0;
   gap: 16px;
 }
 
 .card-image {
-  width: 161px;
+  width: 160px;
   height: 134px;
   border-radius: 6px;
   object-fit: cover;
   object-position: center;
   flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-content {
@@ -43,7 +46,7 @@
   color: var(--color-primary-text, #39404a);
   font-size: var(--body-14-fontSize, 14px);
   font-weight: var(--Weights-Medium, 500);
-  line-height: var(--body-14-lineHeight, 20px);
+  /* line-height: var(--body-14-lineHeight, 20px); */
   margin: 0;
   max-width: 228px;
 }
@@ -55,21 +58,21 @@
   color: var(--color-primary-text, #39404a);
   font-size: var(--body-14-fontSize, 14px);
   font-weight: var(--Weights-Regular, 400);
-  line-height: var(--body-14-lineHeight, 20px);
+  /* line-height: var(--body-14-lineHeight, 20px); */
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
-  gap: 4px; /* Space between location and description */
-  margin-top: 4px; /* Space from header */
+  gap: 4px;
+  margin-top: 4px;
 }
 
 .card-location {
   color: var(--color-primary-text, #39404a);
   font-size: var(--body-12-fontSize, 12px);
   font-weight: var(--Weights-Regular, 400);
-  line-height: var(--body-12-lineHeight, 16px);
+  /* line-height: var(--body-12-lineHeight, 16px); */
   margin: 0;
 }
 
@@ -77,7 +80,7 @@
   color: var(--color-primary-text, #39404a);
   font-size: var(--body-10-fontSize, 10px);
   font-weight: var(--Weights-Regular, 400);
-  line-height: var(--body-10-lineHeight, 12px);
+  /* line-height: var(--body-10-lineHeight, 12px); */
   margin: 0;
   max-width: 292px;
 }
@@ -93,7 +96,7 @@
   color: var(--color-primary-text, #39404a);
   font-size: var(--body-16-fontSize, 16px);
   font-weight: var(--Weights-SemiBold, 600);
-  line-height: var(--body-16-lineHeight, 24px);
+  /* line-height: var(--body-16-lineHeight, 24px); */
 }
 
 .card-button {
@@ -108,9 +111,8 @@
   border-radius: 999px;
   cursor: pointer;
   color: #fff;
-  font-family: var(--body-14-fontFamily, 'Inter');
   font-size: var(--body-14-fontSize, 14px);
-  line-height: var(--body-14-lineHeight, 20px);
+  /* line-height: var(--body-14-lineHeight, 20px); */
 }
 
 .card-button:hover {

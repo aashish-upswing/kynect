@@ -1,0 +1,24 @@
+:host {
+  display: block;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 16px;  We are using explicit separators, so gap might double the space if not careful. Let's rely on separator margins. */
+  width: 100%;
+  max-width: 602px; /* Ensure list matches card width constraint */
+  margin: 0 auto; /* Center list if needed */
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.separator {
+  height: 1px;
+  background-color: #f1f1f1;
+  margin: 16px 0;
+  width: 100%;
+}

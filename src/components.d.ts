@@ -13,6 +13,8 @@ export namespace Components {
          */
         "propertyId": string;
     }
+    interface PropertyList {
+    }
 }
 declare global {
     interface HTMLPropertyCardElement extends Components.PropertyCard, HTMLStencilElement {
@@ -21,8 +23,15 @@ declare global {
         prototype: HTMLPropertyCardElement;
         new (): HTMLPropertyCardElement;
     };
+    interface HTMLPropertyListElement extends Components.PropertyList, HTMLStencilElement {
+    }
+    var HTMLPropertyListElement: {
+        prototype: HTMLPropertyListElement;
+        new (): HTMLPropertyListElement;
+    };
     interface HTMLElementTagNameMap {
         "property-card": HTMLPropertyCardElement;
+        "property-list": HTMLPropertyListElement;
     }
 }
 declare namespace LocalJSX {
@@ -33,6 +42,8 @@ declare namespace LocalJSX {
          */
         "propertyId"?: string;
     }
+    interface PropertyList {
+    }
 
     interface PropertyCardAttributes {
         "propertyId": string;
@@ -40,6 +51,7 @@ declare namespace LocalJSX {
 
     interface IntrinsicElements {
         "property-card": Omit<PropertyCard, keyof PropertyCardAttributes> & { [K in keyof PropertyCard & keyof PropertyCardAttributes]?: PropertyCard[K] } & { [K in keyof PropertyCard & keyof PropertyCardAttributes as `attr:${K}`]?: PropertyCardAttributes[K] } & { [K in keyof PropertyCard & keyof PropertyCardAttributes as `prop:${K}`]?: PropertyCard[K] };
+        "property-list": PropertyList;
     }
 }
 export { LocalJSX as JSX };
@@ -47,6 +59,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "property-card": LocalJSX.IntrinsicElements["property-card"] & JSXBase.HTMLAttributes<HTMLPropertyCardElement>;
+            "property-list": LocalJSX.IntrinsicElements["property-list"] & JSXBase.HTMLAttributes<HTMLPropertyListElement>;
         }
     }
 }
