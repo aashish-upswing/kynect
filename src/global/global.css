@@ -1,0 +1,43 @@
+:root {
+  /* Colors */
+  --color-primary-text: #39404a;
+  --color-accent: #f0a400; /* Star color */
+  --color-button-text: #fff;
+  --color-background-card: #ffffff;
+  --font-family-base: 'Inter', sans-serif;
+
+  /* Typography Variables from requests */
+  --body-14-fontFamily: 'Inter', sans-serif;
+  --body-14-fontSize: 14px;
+  --body-14-lineHeight: 20px;
+  --body-14-letterSpacing: 0;
+
+  --body-12-fontFamily: 'Inter', sans-serif;
+  --body-12-fontSize: 12px;
+  --body-12-lineHeight: 16px;
+  --body-12-letterSpacing: 0;
+
+  --body-10-fontFamily: 'Inter', sans-serif;
+  --body-10-fontSize: 10px;
+  --body-10-lineHeight: 12px;
+  --body-10-letterSpacing: 0;
+
+  --body-16-fontFamily: 'Inter', sans-serif;
+  --body-16-fontSize: 16px;
+  --body-16-lineHeight: 24px;
+  --body-16-letterSpacing: 0;
+
+  --Weights-Regular: 400;
+  --Weights-Medium: 500;
+  --Weights-SemiBold: 600;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

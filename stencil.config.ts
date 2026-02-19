@@ -2,6 +2,9 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'kynect',
+  globalStyle: 'src/global/global.css',
+  taskQueue: 'async',
+  sourceMap: true,
   outputTargets: [
     {
       type: 'dist',
@@ -21,6 +24,6 @@ export const config: Config = {
     },
   ],
   testing: {
-    browserHeadless: "shell",
+    browserHeadless: 'shell',
   },
 };

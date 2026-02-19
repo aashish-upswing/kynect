@@ -6,56 +6,47 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface PropertyCard {
         /**
-          * The first name
+          * The property ID to display
+          * @default '1'
          */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "propertyId": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLPropertyCardElement extends Components.PropertyCard, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLPropertyCardElement: {
+        prototype: HTMLPropertyCardElement;
+        new (): HTMLPropertyCardElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "property-card": HTMLPropertyCardElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface PropertyCard {
         /**
-          * The first name
+          * The property ID to display
+          * @default '1'
          */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "propertyId"?: string;
     }
+
+    interface PropertyCardAttributes {
+        "propertyId": string;
+    }
+
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "property-card": Omit<PropertyCard, keyof PropertyCardAttributes> & { [K in keyof PropertyCard & keyof PropertyCardAttributes]?: PropertyCard[K] } & { [K in keyof PropertyCard & keyof PropertyCardAttributes as `attr:${K}`]?: PropertyCardAttributes[K] } & { [K in keyof PropertyCard & keyof PropertyCardAttributes as `prop:${K}`]?: PropertyCard[K] };
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "property-card": LocalJSX.IntrinsicElements["property-card"] & JSXBase.HTMLAttributes<HTMLPropertyCardElement>;
         }
     }
 }

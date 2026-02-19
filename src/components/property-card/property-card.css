@@ -1,0 +1,118 @@
+:host {
+  display: block;
+  font-family: var(--font-family-base, 'Inter', sans-serif);
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-background-card, #ffffff);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 602px;
+  box-shadow: none;
+  padding: 0;
+  gap: 16px;
+}
+
+.card-image {
+  width: 161px;
+  height: 134px;
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px 10px 10px 0;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-title {
+  color: var(--color-primary-text, #39404a);
+  font-size: var(--body-14-fontSize, 14px);
+  font-weight: var(--Weights-Medium, 500);
+  line-height: var(--body-14-lineHeight, 20px);
+  margin: 0;
+  max-width: 228px;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-primary-text, #39404a);
+  font-size: var(--body-14-fontSize, 14px);
+  font-weight: var(--Weights-Regular, 400);
+  line-height: var(--body-14-lineHeight, 20px);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Space between location and description */
+  margin-top: 4px; /* Space from header */
+}
+
+.card-location {
+  color: var(--color-primary-text, #39404a);
+  font-size: var(--body-12-fontSize, 12px);
+  font-weight: var(--Weights-Regular, 400);
+  line-height: var(--body-12-lineHeight, 16px);
+  margin: 0;
+}
+
+.card-description {
+  color: var(--color-primary-text, #39404a);
+  font-size: var(--body-10-fontSize, 10px);
+  font-weight: var(--Weights-Regular, 400);
+  line-height: var(--body-10-lineHeight, 12px);
+  margin: 0;
+  max-width: 292px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.card-price {
+  color: var(--color-primary-text, #39404a);
+  font-size: var(--body-16-fontSize, 16px);
+  font-weight: var(--Weights-SemiBold, 600);
+  line-height: var(--body-16-lineHeight, 24px);
+}
+
+.card-button {
+  display: inline-flex;
+  height: 32px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background-color: #18181b;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  color: #fff;
+  font-family: var(--body-14-fontFamily, 'Inter');
+  font-size: var(--body-14-fontSize, 14px);
+  line-height: var(--body-14-lineHeight, 20px);
+}
+
+.card-button:hover {
+  background-color: #27272a;
+}
