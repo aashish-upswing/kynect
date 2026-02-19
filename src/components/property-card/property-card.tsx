@@ -1,5 +1,5 @@
 import { Component, Host, h, Prop } from '@stencil/core';
-import { propertyData } from '../../utils/data';
+import { Property } from '../../utils/data';
 import { StarIcon, ArrowIcon } from './assets/icons';
 
 @Component({
@@ -9,12 +9,16 @@ import { StarIcon, ArrowIcon } from './assets/icons';
 })
 export class PropertyCard {
   /**
-   * The property ID to display
+   * The property object to display
    */
-  @Prop() propertyId: string = '1';
+  @Prop() item!: Property;
 
   render() {
-    const property = propertyData.find(p => p.id === this.propertyId) || propertyData[0];
+    const property = this.item;
+
+    if (!property) {
+      return null;
+    }
 
     return (
       <Host>

@@ -5,13 +5,14 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Property } from "./utils/data";
+export { Property } from "./utils/data";
 export namespace Components {
     interface PropertyCard {
         /**
-          * The property ID to display
-          * @default '1'
+          * The property object to display
          */
-        "propertyId": string;
+        "item": Property;
     }
     interface PropertyList {
     }
@@ -37,20 +38,14 @@ declare global {
 declare namespace LocalJSX {
     interface PropertyCard {
         /**
-          * The property ID to display
-          * @default '1'
+          * The property object to display
          */
-        "propertyId"?: string;
+        "item": Property;
     }
     interface PropertyList {
     }
-
-    interface PropertyCardAttributes {
-        "propertyId": string;
-    }
-
     interface IntrinsicElements {
-        "property-card": Omit<PropertyCard, keyof PropertyCardAttributes> & { [K in keyof PropertyCard & keyof PropertyCardAttributes]?: PropertyCard[K] } & { [K in keyof PropertyCard & keyof PropertyCardAttributes as `attr:${K}`]?: PropertyCardAttributes[K] } & { [K in keyof PropertyCard & keyof PropertyCardAttributes as `prop:${K}`]?: PropertyCard[K] };
+        "property-card": PropertyCard;
         "property-list": PropertyList;
     }
 }

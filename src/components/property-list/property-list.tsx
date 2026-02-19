@@ -13,7 +13,7 @@ export class PropertyList {
         <div class="list-container">
           {propertyData.map((property, index) => (
             <div class="list-item">
-              <property-card propertyId={property.id}></property-card>
+              <property-card item={property}></property-card>
               {index < propertyData.length - 1 && <div class="separator"></div>}
             </div>
           ))}
