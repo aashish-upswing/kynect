@@ -1,5 +1,6 @@
 import { h } from '@stencil/core';
 
+// staricon
 export const StarIcon = () => (
   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -12,6 +13,7 @@ export const StarIcon = () => (
   </svg>
 );
 
+// arrowicon
 export const ArrowIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M5.75 3.5L10.25 8L5.75 12.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
